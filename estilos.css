@@ -56,6 +56,15 @@ header img {
     margin-top: 2em;
     width: 100%;
 }
+#fecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#cuadrado {
+    margin-left: 10.5em;
+}
 .iconos {
     margin-top: 5em;
     margin-left: 10em;
@@ -108,7 +117,7 @@ header img {
     justify-content: center;
 }
 #fiesta h1 {
-    margin-top: 7.5em;
+    margin-top: 13em;
     position: relative;
     text-align: center;
 }
@@ -119,11 +128,11 @@ header img {
 }
 #fiesta img {
     position: absolute;
-    top: 128em;
+    top: 126em;
 }
 #fiesta a {
     position: absolute;
-    top: 152em;
+    top: 150em;
     text-decoration: none;
     color: #343434;
     background-color: #E2C89F;
@@ -131,21 +140,19 @@ header img {
     border-radius: 20pt;
     text-align: center;
     justify-content: center;
-    margin-top: 1vh;
 }
 #celebrar {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 2em;
-    margin-top: 4em;
 }
 #copa1 {
-    margin-top: 9em;
+    margin-top: 7em;
     right: 148pt;
     transform: rotate(40deg);
 }
 #copa2 {
-    margin-top: 9em;
+    margin-top: 7em;
     right: 98pt;
     transform: rotate(-40deg);
 }
@@ -189,7 +196,7 @@ table {
 }
 #asistencia a {
     position: absolute;
-    top: 201em;
+    top: 200em;
     text-decoration: none;
     color: #343434;
     background-color: #E2C89F;
@@ -197,7 +204,6 @@ table {
     border-radius: 20pt;
     text-align: center;
     justify-content: center;
-    margin-top: 1vh;
 }
 #regalo h1 {
     margin-top: 1em;
