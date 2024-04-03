@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>V&J</title>
+</head>
+<body>
+    <header>
+        <img src="img/FOTO10.jpg" alt="Foto Vale y Joaco">
+        <img class="nombres" src="img/nombres.png" alt="Nombres">
+        <h1> ¡Nos casamos! </h1>
+        <h2> Y los invitamos a celebrar <br> este sacramento con nosotros </h2>
+        <img class="separador" src="img/separador.png" alt="Separación corazón">
+    </header>
+    <section id="frase">
+        <h2>Y nosotros hemos llegado a saber <br> y creer que Dios nos ama. <br> Dios es amor. <br>
+            El que permanece en amor, <br> permanece en Dios, y Dios en el. <br>
+            (1 Juan 4:16)</h2>
+            <img class="iconos" src="img/calendar_today_FILL0_wght400_GRAD0_opsz24.svg" alt="icono calendario">
+            <h1> ABRIL </h1>
+            <img id="calendario" src="img/calendar.png" alt="calendario">
+    </section>
+    <section id="hora">
+        <img class="iconos" src="img/schedule_FILL0_wght400_GRAD0_opsz24.svg" alt="icono reloj">
+        <img id="diez" src="img/hora.png" alt="hora">
+    </section>
+    <section id="iglesia">
+        <img class="iconos" src="img/cross_FILL0_wght400_GRAD0_opsz24-02.svg" alt="icono cruz">
+        <h1> Parroquia Nuestra Señora <br> de los Dolores Tierra Santa </h1>
+    <div id="contieneiglesia">
+        <h2>Estero Bellaco 2757, <br> Montevideo</h2>
+        <a href="https://www.google.com/maps/place/Parroquia+Nuestra+Se%C3%B1ora+de+los+Dolores+Tierra+Santa/@-34.887842,-56.1619198,17z/data=!3m1!4b1!4m6!3m5!1s0x959f8057d0e2cd7f:0xd5a9d5e0acb999e5!8m2!3d-34.8878464!4d-56.1593449!16s%2Fm%2F0tkgjkf?entry=ttu" target="_blank" > Ver en Google Maps </a>
+    </div>
+    </section>
+    <section id="fiesta">
+        <h1>Luego de la ceremonia </h1>
+        <img id="celebrar" src="img/celebrar.png" alt="acompañanos a celebrar">
+        <h1> Finca Clara </h1>
+    <div id="contienefiesta">
+        <h2> San Juan 5072, <br> Canelones</h2>
+        <a href="https://www.google.com.uy/maps/place/Finca+Clara/@-34.7975452,-56.0193931,17z/data=!4m6!3m5!1s0x95a027e3f65839af:0xd1f5f7f60603c9ba!8m2!3d-34.7975965!4d-56.0194399!16s%2Fg%2F11bw82lxz1?hl=es-419&entry=ttu" target="_blank" > Ver en Google Maps </a>
+    </div>
+    <img class="iconos" id="copa1" src="img/wine_bar_FILL0_wght400_GRAD0_opsz24.svg" alt="copa">
+    <img class="iconos" id="copa2" src="img/wine_bar_FILL0_wght400_GRAD0_opsz24.svg" alt="copa">
+    </section>
+    <section id="cuenta">
+        <h1> Preparate! <br> sólo quedan </h1>
+        <style>
+
+            td {
+             color: #343434;
+            padding: 0px;
+            font-size: 30px;
+            font-family: 'OptiBakerDanmarkOne';
+             text-align: center;
+            }
+            
+            th {
+             color: #343434;
+             text-align: center;
+            padding: 0px;
+            font-size: 12px;
+            font-family: 'OptiBakerDanmarkOne';
+            }
+             
+            </style>
+            
+            
+              <body>
+            
+                <!-- Contador regresivo -->
+                <section>
+               
+            
+            <table align="center" width="100%" >
+                <tr>
+                  <td><span id="days"></span></td>
+                  <td><span id="hours"></th>
+                  <td><span id="minutes"></span></td>
+                </tr>
+                <tr>
+                  <th>Días</th>
+                  <th>Horas</th>
+                  <th>Minutos</th>
+                </tr>
+            </table>
+            
+                </section> 
+                <!-- Fin contador regresivo -->
+            
+                <script>
+                  document.addEventListener('DOMContentLoaded', () => { 
+            
+                    //===
+                    // VARIABLES
+                    //===
+                    const DATE_TARGET = new Date('04/27/2024 7:45 PM');
+                    // DOM for render
+                    const SPAN_DAYS = document.querySelector('span#days');
+                    const SPAN_HOURS = document.querySelector('span#hours');
+                    const SPAN_MINUTES = document.querySelector('span#minutes');
+                    const SPAN_SECONDS = document.querySelector('span#seconds');
+                    // Milliseconds for the calculations
+                    const MILLISECONDS_OF_A_SECOND = 1000;
+                    const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+                    const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
+                    const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
+            
+                    //===
+                    // FUNCTIONS
+                    //===
+            
+                    /**
+                    * Method that updates the countdown and the sample
+                    */
+            function updateCountdown() {
+              // Calcs
+              const NOW = new Date()
+              const DURATION = DATE_TARGET - NOW;
+              let REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
+              let REMAINING_HOURS = Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
+              let REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
+              let REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);
+            
+              // Set any negative values to 0
+              REMAINING_DAYS = REMAINING_DAYS < 0 ? 0 : REMAINING_DAYS;
+              REMAINING_HOURS = REMAINING_HOURS < 0 ? 0 : REMAINING_HOURS;
+              REMAINING_MINUTES = REMAINING_MINUTES < 0 ? 0 : REMAINING_MINUTES;
+              REMAINING_SECONDS = REMAINING_SECONDS < 0 ? 0 : REMAINING_SECONDS;
+            
+              // Naileth Pinto
+            
+              // Render
+              SPAN_DAYS.textContent = REMAINING_DAYS;
+              SPAN_HOURS.textContent = REMAINING_HOURS;
+              SPAN_MINUTES.textContent = REMAINING_MINUTES;
+              SPAN_SECONDS.textContent = REMAINING_SECONDS;
+            }
+            
+                    //===
+                    // INIT
+                    //===
+                    updateCountdown();
+                    // Refresh every second
+                    setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+                });
+                </script>
+    </section>
+    <section id="dresscode">
+        <img id="formal" src="img/formal.png" alt="formal">
+        <img class="iconos" id="traje" src="img/suit_FILL0_wght400_GRAD0_opsz24-02.svg" alt="traje">
+        <img class="iconos" id="vestido" src="img/dress_FILL0_wght400_GRAD0_opsz24-03.svg" alt="vestido">
+    </section>
+    <section id="asistencia">
+        <h1> Confirmá tu asistencia </h1>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWjXcTvU9JP-4s59Fd2tVoWSb6kF1-ZDznbryfOFN8xdUm6A/viewform">Haciendo click acá</a>
+        <p>(antes del día 13 de abril)</p>
+    </section>
+    <section id="regalo">
+        <img id="present" class="iconos" src="img/redeem_FILL0_wght400_GRAD0_opsz24.svg" alt="regalo">
+        <h1> Si deseás hacernos </h1>
+        <img id="unregalo" src="img/regalo.png" alt="un regalo">
+        <p> Caja de ahorros </p>
+        <h1>ITAÚ 3702142 uyu</h1>
+        <h1 id="ultima">ITAÚ  3702134 usd</h1>
+    </section>
+    <section id="final">
+        <img src="img/separador.png" alt="Separación corazón">
+        <h1>¡Te esperamos!</h1>
+    </section>
+    
+</body>
+</html>
