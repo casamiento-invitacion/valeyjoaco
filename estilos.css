@@ -165,14 +165,14 @@ table {
 }
 #dresscode img {
     position: absolute;
-    margin-top: 8vh;
+    margin-top: 7vh;
 }
 #vestido {
-    top: 184em;
+    top: 183.5em;
     right: 155pt;
 }
 #traje {
-    top: 184em;
+    top: 183.5em;
     left: 30pt;
 }
 #formal {
@@ -191,7 +191,7 @@ table {
     position: relative;
 }
 #asistencia p {
-    margin-top: 9em;
+    margin-top: 8em;
     text-align: center;
 }
 #asistencia a {
@@ -216,6 +216,9 @@ table {
 }
 #present {
     margin-top: 5em;
+    justify-content: center;
+    text-align: center;
+    margin-left: 43%;
 }
 #unregalo {
     width: 100%;
